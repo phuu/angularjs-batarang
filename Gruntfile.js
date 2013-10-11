@@ -48,7 +48,7 @@ module.exports = function(grunt) {
           'background.html',
           'devtoolsBackground.html'
         ],
-        dest: 'batarang-release-' + Date.now() + '.zip'
+        dest: 'flight-batarang-release-' + Date.now() + '.zip'
       }
     }
   });
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     md = md.substr(md.indexOf(marker) + marker.length);
 
     // fix image paths
-    md = md.replace(/https:\/\/github.com\/angular\/angularjs-batarang\/raw\/master\/img\//g, '/img/');
+    md = md.replace(/https:\/\/github.com\/phuu\/flight-batarang\/raw\/master\/img\//g, '/img/');
 
     var html = markdown(md);
 
