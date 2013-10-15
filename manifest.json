@@ -16,9 +16,7 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": [
-        "js/inject/debug.js"
-      ],
+      "js": [],
       "run_at": "document_start"
     }
   ],
