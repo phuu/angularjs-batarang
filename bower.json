@@ -1,0 +1,23 @@
+{
+  "name": "flight-batarang",
+  "version": "0.0.0",
+  "homepage": "https://github.com/phuu/flight-batarang",
+  "authors": [
+    "Tom Ashworth <tashworth@twitter.com>"
+  ],
+  "description": "Extends the Developer Tools, adding tools for debugging and profiling Twitter Flight applications.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.0"
+  }
+}
