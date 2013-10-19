@@ -56,5 +56,5 @@ console.groupEnd();
 In an AMD page, the following snippet gets access to the Flight registry which already contains a fair bit of useful introspection data.
 
 ```
-require(['flight/lib/registry'], function (registry) { window. registry = registry; })
+require(['flight/lib/registry'], function (registry) { window.registry = registry; })
 ```
