@@ -5,12 +5,11 @@
   "background": {
     "page": "background/background.html"
   },
-  "devtools_page": "background/devtoolsBackground.html",
+  "devtools_page": "devtools/devtools.html",
   "manifest_version": 2,
   "permissions": [
     "tabs",
     "<all_urls>"
   ],
-  "content_scripts": [],
   "minimum_chrome_version": "21.0.1180.57"
 }

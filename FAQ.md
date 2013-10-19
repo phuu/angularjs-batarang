@@ -1,3 +1,0 @@
-# Batarang FAQ
-
-Nothing to see here...

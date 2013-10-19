@@ -1,0 +1,51 @@
+.reload, .log {
+  position: fixed;
+  bottom: 0.5em;
+}
+.reload {
+  right: 1em;
+}
+.log {
+  left: 1em;
+}
+
+/**
+ * Objects
+ */
+
+.object {
+  display: block;
+  border-left: 1px solid rgba(0,0,0,.1);
+}
+
+.object, .object input {
+  font: 14px/1.3 monospace;
+}
+
+.key, .value {
+  display: inline-block;
+}
+
+.key {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.object.key {
+  background: none;
+  border: none;
+}
+
+.object.key:before {
+  content: '▶';
+  font-size: 0.667rem;
+  top: 0.667rem;
+  display: block;
+  position: absolute;
+  left: 0.667rem;
+}
+
+.object.value {
+  margin-left: 1.5em;
+  display: block;
+}

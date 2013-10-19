@@ -1,16 +1,38 @@
-var respond = function (port, tabId, changeInfo, tab) {
-  if (tabId !== msg.inspectedTabId) return;
-  port.postMessage('refresh');
-};
+/**
+ * CONFIGURATION
+ */
 
-// Notify of page refreshes
-chrome.extension.onConnect.addListener(function(port) {
-  port.onMessage.addListener(function (msg) {
-    if (msg.action !== 'register') return;
-    var listener = respond.bind(null, port);
-    chrome.tabs.onUpdated.addListener(listener);
-    port.onDisconnect.addListener(function () {
-      chrome.tabs.onUpdated.removeListener(listener);
+chrome.manifest = chrome.app.getDetails();
+
+/**
+ * CONTENT SCRIPTS
+ */
+
+// Programmatically inject an array of scripts
+var inject = function (id, scripts) {
+  scripts.forEach(function (script) {
+    chrome.tabs.executeScript(id, {
+      file: script
     });
   });
+};
+
+// Listen for embedded events
+chrome.extension.onConnect.addListener(function(rawPort) {
+
+  // Ignore anything that doesn't begin with Flight
+  if (!rawPort.name.match(/^flight-batarang/)) return;
+
+  var port = PortWrapper(rawPort),
+      tab = rawPort.sender.tab;
+
+  /**
+   * port.on('x')
+   */
+
+  port.on('hello', function () {
+    console.log('message from', rawPort.name);
+    console.log.apply(console, [].slice.call(arguments));
+  });
+
 });
