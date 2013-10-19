@@ -33,6 +33,9 @@ chrome.extension.onConnect.addListener(function(rawPort) {
   port.on('hello', function () {
     console.log('message from', rawPort.name);
     console.log.apply(console, [].slice.call(arguments));
+    port.trigger('reply', {
+      hello: 'world'
+    });
   });
 
 });
