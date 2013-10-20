@@ -56,9 +56,11 @@
 <a href="#" class="js-reload reload"><i class="icon-refresh"></i></a>
 <a href="#" class="js-log log">Log</a>
 
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/es5-shim/es5-sham.js"></script>
+<![endif]-->
 <script src="bower_components/jquery/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../shared/port-wrapper.js"></script>
-<script src="../shared/connect.js"></script>
+<script src="bower_components/requirejs/require.js" data-main="js/main.js"></script>
 <script src="js/ui.js"></script>
-<script src="js/injector.js"></script>
